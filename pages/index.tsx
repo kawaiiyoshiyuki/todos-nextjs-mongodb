@@ -8,16 +8,13 @@ import TodoLayout from '../components/TodoLayout/TodoLayout';
 //   { text: 'Push a new commit', complete: false },
 // ];
 
-const IndexPage = (props: any) => {
-  console.log(props);
-  return (
-    <>
-      <Header />
-      <TodoLayout initTodos={props.data} />
-      <Footer />
-    </>
-  );
-}
+const IndexPage = (props: any) => (
+  <>
+    <Header />
+    <TodoLayout initTodos={props.data} />
+    <Footer />
+  </>
+);
 
 export async function getServerSideProps() {
   // get todos data from API
