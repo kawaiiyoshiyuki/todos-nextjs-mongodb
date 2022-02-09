@@ -1,4 +1,4 @@
-# TODOS NextJS fullstack with MongoDB
+# TODOS example app - NextJS fullstack with MongoDB
 
 Example Todos application based on [NextJS](https://nextjs.org/).
 
