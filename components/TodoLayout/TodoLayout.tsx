@@ -9,16 +9,13 @@ import useUpdateTodo from '../../hooks/useUpdateTodo';
 import { ITodo } from './types';
 
 type FormElem = React.FormEvent<HTMLFormElement>
-// const url = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api/todos';
+
 const url = process.env.NEXT_PUBLIC_API_URL;
 
 const TodoLayout = ({ initTodos }: { initTodos: ITodo[] }) => {
-  console.log('env url: ', process.env.NEXT_PUBLIC_API_URL);
-
   const { data, refetch: getTodos } = useGetTodos(url);
   const todos = data?.data;
 
-  // const { data: todos , refetch: getTodos } = useGetTodos(process.env.NEXT_PUBLIC_API_URL);
   const addTodo = useAddTodo(url);
   const updateTodo = useUpdateTodo(url);
   const deleteTodo  = useDeleteTodo(url);

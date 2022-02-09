@@ -14,7 +14,6 @@ export async function getServerSideProps() {
   // get todos data from API
   const res = await fetch(process.env.API_URL as string);
   const todos = await res.json();
-  console.log('todos from serverget', todos);
 
   return {
     props: { ...todos },
