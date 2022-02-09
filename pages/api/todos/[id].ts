@@ -1,7 +1,8 @@
 import dbConnect from '../../../lib/dbConnect'
 import Todo from '../../../models/Todo'
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler (req, res) {
+export default async function handler (req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
 
   await dbConnect();
